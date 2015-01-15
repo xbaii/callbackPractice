@@ -23,8 +23,11 @@ and what you should write is the favNum function that makes the code above work,
 */
 
 
+var first = function(arr, callback) {
+  var firstName = arr[0];
+  callback(firstName);
+}
 
-  //Code Here for first
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
@@ -36,13 +39,28 @@ first(names, function(firstName){
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
 
+var last = function(arr, callback) {
+  callback(arr[arr.length - 1]);
+};
 
-
-  //Code Here for last
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
   console.log('The last name in names is ', lastName);
+});
+
+
+
+
+/* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
+
+
+var multiply = function(num1, num2, callback){
+  callback(num1 * num2);
+};
+
+multiply(4, 3, function(answer){
+  console.log('The answer is ', answer); //should console.log 12
 });
 
 
@@ -53,26 +71,14 @@ last(names, function(lastName){
 
 
 
-
-
-
-  //Code Here for multiply
-
-multiply(4, 3, function(answer){
-  console.log('The answer is ', answer); //should console.log 12
-})
-
-
-
-
-
-/* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
-
-
-
-  //Code Here for contains
+var contains = function(arr, name, callback) {
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i] === name){
+      var result = true;
+    };
+  };
+  callback(result);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 contains(names, 'Colt', function(result){
@@ -91,8 +97,16 @@ contains(names, 'Colt', function(result){
 
 
 
+var uniq = function(arr, callback) {
+  for(var i = 0; i < arr.length; i++){
+    if(i !== arr.indexOf(arr[i])){
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+  callback(arr);
+};
 
-    //Code Here for uniq
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
@@ -107,8 +121,9 @@ uniq(names, function(uniqArr){
 
 
 
-
-    //Code Here for each
+var each = function(arr, callback) {
+  arr.indexOf()
+}
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
@@ -122,10 +137,16 @@ each(names, function(item, indice){
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
 
+var getUserById = function(arr, id, callback){
+  for(i = 0; i < users.length; i++) {
+    if (users[i].id === id) {
+      var user = 
+    }
+  }
+  callback(getUserById);
+};
 
 
-
- //code here for getUserById
 
 var users = [
   {
